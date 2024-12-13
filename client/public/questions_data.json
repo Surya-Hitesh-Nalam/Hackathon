@@ -1,0 +1,339 @@
+[
+    {
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyper Text Markup Language",
+        "High Text Markup Language",
+        "Hyper Tabular Markup Language",
+        "None of the above"
+      ],
+      "correct_option": "Hyper Text Markup Language",
+      "domain": "front-end"
+    },
+    {
+      "question": "Which of the following is a JavaScript framework?",
+      "options": ["React", "Django", "Angular", "Flask"],
+      "correct_option": "React",
+      "domain": "front-end"
+    },
+    {
+      "question": "What is the primary function of CSS?",
+      "options": [
+        "Structure the content",
+        "Style the content",
+        "Write the content",
+        "Serve the content"
+      ],
+      "correct_option": "Style the content",
+      "domain": "front-end"
+    },
+    {
+      "question": "Which of the following is not a backend technology?",
+      "options": ["Node.js", "Ruby on Rails", "Django", "React"],
+      "correct_option": "React",
+      "domain": "back-end"
+    },
+    {
+      "question": "Which programming language is primarily used for building APIs in the backend?",
+      "options": ["Python", "JavaScript", "PHP", "Java"],
+      "correct_option": "JavaScript",
+      "domain": "back-end"
+    },
+    {
+      "question": "What is the use of SQL?",
+      "options": [
+        "Managing files",
+        "Managing databases",
+        "Creating web pages",
+        "None of the above"
+      ],
+      "correct_option": "Managing databases",
+      "domain": "back-end"
+    },
+    {
+      "question": "What is the time complexity of accessing an element in a hash map?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+      "correct_option": "O(1)",
+      "domain": "ds"
+    },
+    {
+      "question": "Which data structure uses LIFO (Last In First Out) order?",
+      "options": ["Queue", "Stack", "Array", "Linked List"],
+      "correct_option": "Stack",
+      "domain": "ds"
+    },
+    {
+      "question": "What is the Big-O notation for bubble sort?",
+      "options": ["O(n)", "O(n log n)", "O(n^2)", "O(log n)"],
+      "correct_option": "O(n^2)",
+      "domain": "ds"
+    },
+    {
+      "question": "Which of the following algorithms is used in supervised learning?",
+      "options": ["K-Means", "K-Nearest Neighbors", "Random Forest", "DBSCAN"],
+      "correct_option": "K-Nearest Neighbors",
+      "domain": "ai"
+    },
+    {
+      "question": "Which of the following is an example of unsupervised learning?",
+      "options": [
+        "Linear Regression",
+        "K-Means Clustering",
+        "Logistic Regression",
+        "Decision Trees"
+      ],
+      "correct_option": "K-Means Clustering",
+      "domain": "ai"
+    },
+    {
+      "question": "What is overfitting in machine learning?",
+      "options": [
+        "Model underperforms on training data",
+        "Model generalizes well",
+        "Model memorizes the training data",
+        "None of the above"
+      ],
+      "correct_option": "Model memorizes the training data",
+      "domain": "ml"
+    },
+    {
+      "question": "Which of the following is a type of neural network?",
+      "options": [
+        "Decision Tree",
+        "Convolutional Neural Network",
+        "Random Forest",
+        "Linear Regression"
+      ],
+      "correct_option": "Convolutional Neural Network",
+      "domain": "dl"
+    },
+    {
+      "question": "What does CNN stand for in deep learning?",
+      "options": [
+        "Computerized Neural Network",
+        "Convolutional Neural Network",
+        "Cognitive Neural Network",
+        "None of the above"
+      ],
+      "correct_option": "Convolutional Neural Network",
+      "domain": "dl"
+    },
+    {
+      "question": "Which of the following is a common application of deep learning?",
+      "options": [
+        "Image recognition",
+        "Data mining",
+        "SEO optimization",
+        "Data normalization"
+      ],
+      "correct_option": "Image recognition",
+      "domain": "dl"
+    },
+    {
+      "question": "What is the purpose of the full-stack developer?",
+      "options": [
+        "Handle front-end and back-end",
+        "Handle only the database",
+        "Manage APIs",
+        "Only focus on the backend"
+      ],
+      "correct_option": "Handle front-end and back-end",
+      "domain": "full-stack"
+    },
+    {
+      "question": "Which of the following is a popular full-stack JavaScript framework?",
+      "options": ["Django", "Flask", "Node.js", "MEAN stack"],
+      "correct_option": "MEAN stack",
+      "domain": "full-stack"
+    },
+    {
+      "question": "What is the primary purpose of the IoT?",
+      "options": [
+        "Networking devices",
+        "Sending emails",
+        "Running applications",
+        "Communicating with sensors"
+      ],
+      "correct_option": "Networking devices",
+      "domain": "iot"
+    },
+    {
+      "question": "Which protocol is commonly used in IoT devices for low power communication?",
+      "options": ["HTTP", "MQTT", "FTP", "SMTP"],
+      "correct_option": "MQTT",
+      "domain": "iot"
+    },
+    {
+      "question": "Which of the following is a CSS layout model used for designing responsive websites?",
+      "options": [
+        "Flexbox",
+        "Grid",
+        "Both Flexbox and Grid",
+        "None of the above"
+      ],
+      "correctAnswers": ["Both Flexbox and Grid"],
+      "domain": "front-end"
+    },
+    {
+      "question": "What is the purpose of the 'useState' hook in React?",
+      "options": [
+        "To manage state within a functional component",
+        "To create classes",
+        "To handle events",
+        "None of the above"
+      ],
+      "correctAnswers": ["To manage state within a functional component"],
+      "domain": "front-end"
+    },
+    {
+      "question": "Which JavaScript function is used to add an event listener to an element?",
+      "options": [
+        "addEventListener()",
+        "attachEvent()",
+        "onClick()",
+        "listenEvent()"
+      ],
+      "correctAnswers": ["addEventListener()"],
+      "domain": "front-end"
+    },
+    {
+      "question": "What is the main purpose of Express.js in a Node.js application?",
+      "options": [
+        "To handle routing and middleware",
+        "To create a UI",
+        "To manage databases",
+        "None of the above"
+      ],
+      "correctAnswers": ["To handle routing and middleware"],
+      "domain": "back-end"
+    },
+    {
+      "question": "Which of the following is an SQL database management system?",
+      "options": ["MySQL", "MongoDB", "Redis", "Cassandra"],
+      "correctAnswers": ["MySQL"],
+      "domain": "back-end"
+    },
+    {
+      "question": "Which HTTP method is used to delete a resource from a server?",
+      "options": ["DELETE", "POST", "GET", "PUT"],
+      "correctAnswers": ["DELETE"],
+      "domain": "back-end"
+    },
+    {
+      "question": "Which of the following is a common method for feature selection in data science?",
+      "options": [
+        "Principal Component Analysis (PCA)",
+        "K-Means Clustering",
+        "Linear Regression",
+        "Decision Trees"
+      ],
+      "correctAnswers": ["Principal Component Analysis (PCA)"],
+      "domain": "data science"
+    },
+    {
+      "question": "Which Python library is primarily used for creating visualizations in data science?",
+      "options": ["Matplotlib", "TensorFlow", "Keras", "NumPy"],
+      "correctAnswers": ["Matplotlib"],
+      "domain": "data science"
+    },
+    {
+      "question": "What is the purpose of cross-validation in machine learning?",
+      "options": [
+        "To validate the model's performance on unseen data",
+        "To optimize the learning rate",
+        "To reduce training time",
+        "None of the above"
+      ],
+      "correctAnswers": ["To validate the model's performance on unseen data"],
+      "domain": "data science"
+    },
+    {
+      "question": "Which of the following algorithms is an example of supervised learning?",
+      "options": [
+        "Linear Regression",
+        "K-Means Clustering",
+        "DBSCAN",
+        "Isolation Forest"
+      ],
+      "correctAnswers": ["Linear Regression"],
+      "domain": "ml"
+    },
+    {
+      "question": "In which type of machine learning is a model trained on labeled data?",
+      "options": [
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Reinforcement Learning",
+        "None of the above"
+      ],
+      "correctAnswers": ["Supervised Learning"],
+      "domain": "ml"
+    },
+    {
+      "question": "What is the primary purpose of a loss function in machine learning?",
+      "options": [
+        "To evaluate the performance of a model",
+        "To enhance the model's accuracy",
+        "To regularize the model",
+        "None of the above"
+      ],
+      "correctAnswers": ["To evaluate the performance of a model"],
+      "domain": "ml"
+    },
+    {
+      "question": "Which deep learning model is commonly used for natural language processing tasks?",
+      "options": [
+        "Recurrent Neural Networks (RNN)",
+        "Convolutional Neural Networks (CNN)",
+        "Generative Adversarial Networks (GAN)",
+        "Support Vector Machines (SVM)"
+      ],
+      "correctAnswers": ["Recurrent Neural Networks (RNN)"],
+      "domain": "dl"
+    },
+    {
+      "question": "Which activation function is most commonly used in hidden layers of deep neural networks?",
+      "options": ["ReLU", "Sigmoid", "Tanh", "Softmax"],
+      "correctAnswers": ["ReLU"],
+      "domain": "dl"
+    },
+    {
+      "question": "What is a typical application of convolutional neural networks (CNNs)?",
+      "options": [
+        "Image recognition",
+        "Time series prediction",
+        "Reinforcement learning",
+        "None of the above"
+      ],
+      "correctAnswers": ["Image recognition"],
+      "domain": "dl"
+    },
+    {
+      "question": "Which protocol is commonly used for lightweight messaging in IoT devices?",
+      "options": ["MQTT", "HTTP", "TCP", "UDP"],
+      "correctAnswers": ["MQTT"],
+      "domain": "iot"
+    },
+    {
+      "question": "What is the main purpose of a Raspberry Pi in an IoT system?",
+      "options": [
+        "To act as a central processing unit",
+        "To communicate wirelessly with IoT devices",
+        "To store data",
+        "None of the above"
+      ],
+      "correctAnswers": ["To act as a central processing unit"],
+      "domain": "iot"
+    },
+    {
+      "question": "Which of the following is a challenge in IoT systems?",
+      "options": [
+        "Security",
+        "Energy efficiency",
+        "Scalability",
+        "All of the above"
+      ],
+      "correctAnswers": ["All of the above"],
+      "domain": "iot"
+    }
+  ]F
