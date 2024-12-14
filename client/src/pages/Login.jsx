@@ -88,7 +88,13 @@ const Login = () => {
   ]);
 
   return (
-    <div className="flex items-center w-full justify-center mt-20">
+   <div className=" bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700">
+      <div className="flex flex-row gap-2 items-center justify-center pt-7">
+        <img src={logo1} alt="shuriken" className="animate-spin w-10 h-10 rounded-full" />
+        <h1 className="text-4xl text-white font-bold  ">
+          WELCOME TO SHURIKEN
+        </h1>
+      </div>
       <Tabs defaultValue="login" className="w-[400px]">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="signup">Signup</TabsTrigger>
