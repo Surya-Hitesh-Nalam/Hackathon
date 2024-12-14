@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom'; // Import NavLink
-import Navbar from './Navbar'; // Import Navbar
+import Navbar from '@/components/Navbar'; // Import Navbar
 import { setQuestionsShuffled, selectAnswer, nextQuestion, resetTest } from '@/features/mockTestSlice';
 
 const MockTest = () => {
