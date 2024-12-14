@@ -24,8 +24,6 @@ import {
 import PurchaseCourseProtectedRoute from "./components/PurchaseCourseProtectedRoute";
 import { ThemeProvider } from "./components/ThemeProvider";
 import ResumeBuilder from "./pages/LandingPages/ResumeBuilder"
-import LandingPage from "./pages/LandingPages/LandingPage";
-import Navbar from "./components/Navbar";
 import MockTest from "./pages/MockTest";
 
 const appRouter = createBrowserRouter([
@@ -34,8 +32,12 @@ const appRouter = createBrowserRouter([
     element: <MainLayout />,
   },
   {
-    path:"/courses",
-    element:(<><HeroSection /><Courses /></>
+    path: "/courses",
+    element: (
+      <ProtectedRoute>
+        <HeroSection />
+        <Courses />
+      </ProtectedRoute>
     )
   },
   {
@@ -52,7 +54,9 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "course",
-        element: <CourseTable />,
+        element: <>
+          <CourseTable />
+        </>,
       },
       {
         path: "course/create",
@@ -71,9 +75,9 @@ const appRouter = createBrowserRouter([
         element: <EditLecture />,
       },
     ],
-    
+
   },
-  
+
   {
     path: "/login",
     element: (
@@ -91,9 +95,7 @@ const appRouter = createBrowserRouter([
   {
     path: "/mocktest",
     element: (
-      <ProtectedRoute>
       <MockTest />
-      </ProtectedRoute>
     )
   },
   {
@@ -112,7 +114,7 @@ const appRouter = createBrowserRouter([
       </ProtectedRoute>
     ),
   },
- 
+
   {
     path: "course/search",
     element: (

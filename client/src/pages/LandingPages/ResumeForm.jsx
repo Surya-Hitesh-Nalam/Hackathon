@@ -19,6 +19,7 @@ const ResumeForm = ({ handleFormChange }) => {
       achievements: '',
       extraCurricular: ''
    });
+
    const downloadResume = () => {
       const element = document.getElementById("resume-preview");
       const options = {
@@ -97,7 +98,7 @@ const ResumeForm = ({ handleFormChange }) => {
                placeholder="Full Name"
                value={formData.name}
                onChange={(e) => handleChange(e, 'personal')}
-               className="w-full px-4 py-2 border rounded-md mb-4"
+               className="w-full px-4 py-2 border rounded-md mb-4 text-black"
             />
             <label className="block text-gray-400 mb-1">Email</label>
             <input
@@ -106,7 +107,7 @@ const ResumeForm = ({ handleFormChange }) => {
                placeholder="Email"
                value={formData.email}
                onChange={(e) => handleChange(e, 'personal')}
-               className="w-full px-4 py-2 border rounded-md mb-4"
+               className="w-full px-4 py-2 border rounded-md mb-4 text-black"
             />
             <label className="block text-gray-400 mb-1">Phone</label>
             <input
@@ -115,7 +116,7 @@ const ResumeForm = ({ handleFormChange }) => {
                placeholder="Phone"
                value={formData.phone}
                onChange={(e) => handleChange(e, 'personal')}
-               className="w-full px-4 py-2 border rounded-md"
+               className="w-full px-4 py-2 border rounded-md text-black"
             />
          </div>
 
@@ -128,7 +129,7 @@ const ResumeForm = ({ handleFormChange }) => {
                placeholder="GitHub URL"
                value={formData.github}
                onChange={(e) => handleChange(e, 'personal')}
-               className="w-full px-4 py-2 border rounded-md mb-4"
+               className="w-full px-4 py-2 border rounded-md mb-4 text-black"
             />
             <label className="block text-gray-400 mb-1">LinkedIn URL</label>
             <input
@@ -137,7 +138,7 @@ const ResumeForm = ({ handleFormChange }) => {
                placeholder="LinkedIn URL"
                value={formData.linkedin}
                onChange={(e) => handleChange(e, 'personal')}
-               className="w-full px-4 py-2 border rounded-md mb-4"
+               className="w-full px-4 py-2 border rounded-md mb-4 text-black"
             />
             <label className="block text-gray-400 mb-1">Portfolio URL</label>
             <input
@@ -146,7 +147,7 @@ const ResumeForm = ({ handleFormChange }) => {
                placeholder="Portfolio URL"
                value={formData.portfolio}
                onChange={(e) => handleChange(e, 'personal')}
-               className="w-full px-4 py-2 border rounded-md"
+               className="w-full px-4 py-2 border rounded-md text-black"
             />
          </div>
 
@@ -162,7 +163,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      placeholder="Degree"
                      value={edu.degree}
                      onChange={(e) => handleChange(e, 'education', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   <label className="block text-gray-400 mb-1">Duration</label>
                   <input
@@ -171,7 +172,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      placeholder="Duration (e.g., 2019-2023)"
                      value={edu.duration}
                      onChange={(e) => handleChange(e, 'education', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   <label className="block text-gray-400 mb-1">Percentage/CGPA</label>
                   <input
@@ -180,7 +181,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      placeholder="Percentage / CGPA"
                      value={edu.percentage}
                      onChange={(e) => handleChange(e, 'education', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   {index > 0 && (
                      <button
@@ -201,6 +202,7 @@ const ResumeForm = ({ handleFormChange }) => {
                Add More Education
             </button>
          </div>
+
          {/* Experience Section */}
          <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2">Experience</h3>
@@ -213,7 +215,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      placeholder="Role"
                      value={exp.role}
                      onChange={(e) => handleChange(e, 'experience', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   <label className="block text-gray-400 mb-1">Duration</label>
                   <input
@@ -222,7 +224,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      placeholder="Duration (e.g., 2020-2022)"
                      value={exp.duration}
                      onChange={(e) => handleChange(e, 'experience', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   <label className="block text-gray-400 mb-1">Details</label>
                   <textarea
@@ -230,7 +232,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      placeholder="Job details"
                      value={exp.details}
                      onChange={(e) => handleChange(e, 'experience', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   {index > 0 && (
                      <button
@@ -252,7 +254,6 @@ const ResumeForm = ({ handleFormChange }) => {
             </button>
          </div>
 
-
          {/* Projects Section */}
          <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2">Projects</h3>
@@ -265,7 +266,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      placeholder="Project Title"
                      value={project.title}
                      onChange={(e) => handleChange(e, 'projects', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   <label className="block text-gray-400 mb-1">Tech Stack</label>
                   <input
@@ -274,7 +275,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      placeholder="Tech Stack Used (comma-separated)"
                      value={project.techStack}
                      onChange={(e) => handleChange(e, 'projects', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   <label className="block text-gray-400 mb-1">Description</label>
                   <textarea
@@ -282,7 +283,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      placeholder="Project Description"
                      value={project.description}
                      onChange={(e) => handleChange(e, 'projects', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   {index > 0 && (
                      <button
@@ -316,7 +317,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      placeholder="Certification Title"
                      value={cert.title}
                      onChange={(e) => handleChange(e, 'certifications', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   <label className="block text-gray-400 mb-1">Issued By</label>
                   <input
@@ -325,7 +326,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      placeholder="Issued By"
                      value={cert.issuedBy}
                      onChange={(e) => handleChange(e, 'certifications', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   <label className="block text-gray-400 mb-1">Date of Issue</label>
                   <input
@@ -333,7 +334,7 @@ const ResumeForm = ({ handleFormChange }) => {
                      name="date"
                      value={cert.date}
                      onChange={(e) => handleChange(e, 'certifications', index)}
-                     className="w-full px-4 py-2 border rounded-md"
+                     className="w-full px-4 py-2 border rounded-md text-black"
                   />
                   {index > 0 && (
                      <button
@@ -358,60 +359,60 @@ const ResumeForm = ({ handleFormChange }) => {
          {/* Skills Section */}
          <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2">Skills</h3>
-            <label className="block text-gray-400 mb-1">List your skills (comma-separated)</label>
-            <input
-               type="text"
+            <textarea
                name="skills"
-               placeholder="e.g., JavaScript, React, Node.js"
+               placeholder="Skills (comma-separated)"
                value={formData.skills.join(", ")}
                onChange={(e) => handleChange(e, 'skills')}
-               className="w-full px-4 py-2 border rounded-md"
+               className="w-full px-4 py-2 border rounded-md text-black"
             />
          </div>
 
          {/* Languages Section */}
          <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2">Languages</h3>
-            <label className="block text-gray-400 mb-1">List languages (comma-separated)</label>
-            <input
-               type="text"
+            <textarea
                name="languages"
-               placeholder="e.g., English, Spanish, French"
+               placeholder="Languages (comma-separated)"
                value={formData.languages.join(", ")}
                onChange={(e) => handleChange(e, 'languages')}
-               className="w-full px-4 py-2 border rounded-md"
+               className="w-full px-4 py-2 border rounded-md text-black"
             />
          </div>
 
          {/* Achievements Section */}
          <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2">Achievements</h3>
-            <label className="block text-gray-400 mb-1">List your achievements</label>
             <textarea
                name="achievements"
-               placeholder="e.g., Awarded 'Employee of the Year' at XYZ company."
+               placeholder="Achievements"
                value={formData.achievements}
                onChange={(e) => handleChange(e, 'achievements')}
-               className="w-full px-4 py-2 border rounded-md"
+               className="w-full px-4 py-2 border rounded-md text-black"
             />
          </div>
 
-         {/* Extra-Curricular Activities Section */}
+         {/* Extra-curricular Section */}
          <div className="mb-6">
-            <h3 className="text-lg font-semibold mb-2">Extra-Curricular Activities</h3>
-            <label className="block text-gray-400 mb-1">List your extra-curricular activities</label>
+            <h3 className="text-lg font-semibold mb-2">Extra-curricular</h3>
             <textarea
                name="extraCurricular"
-               placeholder="e.g., Volunteer work, sports, etc."
+               placeholder="Extra-curricular Activities"
                value={formData.extraCurricular}
                onChange={(e) => handleChange(e, 'extraCurricular')}
-               className="w-full px-4 py-2 border rounded-md"
+               className="w-full px-4 py-2 border rounded-md text-black"
             />
          </div>
 
-         <button onClick={downloadResume} className="mb-4 p-2 bg-blue-500 text-white rounded">
-            Download Resume
-         </button>
+         {/* Download Button */}
+         <div className="mb-6 flex justify-center">
+            <button
+               onClick={downloadResume}
+               className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+            >
+               Download Resume
+            </button>
+         </div>
       </div>
    );
 };

@@ -1,50 +1,44 @@
-import { useState, useEffect } from "react";
+// src/components/MockTest.js
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom'; // Import NavLink
+import { setQuestionsShuffled, selectAnswer, nextQuestion, resetTest } from '@/features/mockTestSlice';
 
 const MockTest = () => {
-   const [questions, setQuestions] = useState([]);
-   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-   const [selectedAnswer, setSelectedAnswer] = useState(null);
-   const [score, setScore] = useState(0);
-   const [showScore, setShowScore] = useState(false);
+   const dispatch = useDispatch();
+   const {
+      questions,
+      currentQuestionIndex,
+      selectedAnswer,
+      score,
+      showScore,
+   } = useSelector((state) => state.mockTest);
 
    // Load questions from the JSON file
    useEffect(() => {
       async function fetchQuestions() {
          try {
-            const response = await fetch("/questions_data.json");
+            const response = await fetch('/questions_data.json');
             if (!response.ok) {
                throw new Error(`Failed to fetch: ${response.statusText}`);
             }
             const data = await response.json();
-
-            // Shuffle and select 10 random questions
-            const shuffledQuestions = data.sort(() => 0.5 - Math.random()).slice(0, 10);
-            setQuestions(shuffledQuestions);
+            dispatch(setQuestionsShuffled(data)); // Dispatch action to set shuffled questions
          } catch (error) {
-            console.error("Error loading questions:", error);
+            console.error('Error loading questions:', error);
          }
       }
       fetchQuestions();
-   }, []);
+   }, [dispatch]);
 
    // Handle answer selection
    const handleAnswerClick = (option) => {
-      setSelectedAnswer(option);
-
-      // Check if the selected option matches the correct answer
-      if (option === questions[currentQuestionIndex].correct_option) {
-         setScore((prevScore) => prevScore + 1); // Increment score if correct
-      }
+      dispatch(selectAnswer({ option }));
    };
 
    // Move to the next question
    const handleNextQuestion = () => {
-      setSelectedAnswer(null);
-      if (currentQuestionIndex < questions.length - 1) {
-         setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-      } else {
-         setShowScore(true); // Show the score at the end
-      }
+      dispatch(nextQuestion());
    };
 
    if (questions.length === 0) {
@@ -59,12 +53,22 @@ const MockTest = () => {
                <p className="text-lg">
                   {score} out of {questions.length}
                </p>
-               <button
-                  onClick={() => window.location.reload()}
-                  className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-               >
-                  Retake Test
-               </button>
+
+               <div className="button-group mt-6 flex justify-center space-x-4">
+                  <button
+                     onClick={() => dispatch(resetTest())}
+                     className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                  >
+                     Retake Test
+                  </button>
+                  {/* Add NavLink to navigate to /course */}
+                  <NavLink
+                     to="/courses"
+                     className="px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-600"
+                  >
+                     View Courses
+                  </NavLink>
+               </div>
             </div>
          ) : (
             <div className="question-section">
@@ -78,9 +82,9 @@ const MockTest = () => {
                         key={index}
                         className={`option-button px-4 py-2 border rounded-md mb-2 text-left ${selectedAnswer === option
                            ? option === questions[currentQuestionIndex].correct_option
-                              ? "bg-green-200 border-green-500"
-                              : "bg-red-200 border-red-500"
-                           : "bg-gray-100 hover:bg-gray-200"
+                              ? 'bg-green-200 border-green-500'
+                              : 'bg-red-200 border-red-500'
+                           : 'bg-gray-100 hover:bg-gray-200'
                            }`}
                         onClick={() => handleAnswerClick(option)}
                         disabled={selectedAnswer !== null}
@@ -94,7 +98,7 @@ const MockTest = () => {
                   disabled={selectedAnswer === null}
                   className="next-button mt-6 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
                >
-                  {currentQuestionIndex === questions.length - 1 ? "Finish" : "Next Question"}
+                  {currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Next Question'}
                </button>
             </div>
          )}

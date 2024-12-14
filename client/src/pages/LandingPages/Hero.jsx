@@ -21,21 +21,15 @@ const Hero = () => {
                </p>
 
                <div className='flex gap-2'>
-                  <motion.button
-                     className="px-4 py-3 text-base text-center font-semibold bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
-                     whileHover={{ scale: 1.05 }}
-                     transition={{ type: 'spring', stiffness: 300 }}
-                  >
-                     View Jobs
-                  </motion.button>
+
                   <NavLink to="/courses">
-                  <motion.button
-                     className="px-4 py-3 text-base text-center font-semibold bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
-                     whileHover={{ scale: 1.05 }}
-                     transition={{ type: 'spring', stiffness: 300 }}
-                  >
-                     View Courses
-                  </motion.button>
+                     <motion.button
+                        className="px-4 py-3 text-base text-center font-semibold bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: 'spring', stiffness: 300 }}
+                     >
+                        View Courses
+                     </motion.button>
                   </NavLink>
                   <NavLink to="/resume">
                      <motion.button
