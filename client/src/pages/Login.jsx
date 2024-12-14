@@ -90,7 +90,7 @@ const Login = () => {
   return (
    <div className=" bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700">
       <div className="flex flex-row gap-2 items-center justify-center pt-7">
-        <img src={logo1} alt="shuriken" className="animate-spin w-10 h-10 rounded-full" />
+        <img src={logo} alt="shuriken" className="animate-spin w-10 h-10 rounded-full" />
         <h1 className="text-4xl text-white font-bold  ">
           WELCOME TO SHURIKEN
         </h1>
