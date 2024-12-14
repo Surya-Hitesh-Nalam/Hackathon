@@ -95,7 +95,9 @@ const appRouter = createBrowserRouter([
   {
     path: "/mocktest",
     element: (
+       <ProtectedRoute>
       <MockTest />
+         </ProtectedRoute>
     )
   },
   {
